@@ -6,6 +6,7 @@
 # RL_Bananas
 
 ## Introduction
+
 For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.
 
 ![Trained Agent][image1]
@@ -39,8 +40,8 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 ## Instructions
 
-1. Be sure you're running a Python 3.5+ jupyter notebook
-2. Install the following libraries:
+1. Be sure you're running a Python 3.6+ jupyter notebook
+2. Install the following libraries (see next point if you have problems with the environment):
 
  - gym
  - torch (better if you're using CUDA/GPU)
@@ -50,3 +51,49 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 3. Follow the instructions in `Navigation.ipynb` to get started with training your own agent. The last cell uses a pretrained set of weights; hopefully, you'll get a score of at least +13!
 
+## Python dependencies (Conda env)
+
+To set up your python environment to run the code in this repository, follow the instructions below.
+
+1. Create (and activate) a new environment with Python 3.6.
+
+	- __Linux__ or __Mac__: 
+	```bash
+	conda create --name rl_torch_36 python=3.6
+	source activate rl_torch_36
+	```
+	- __Windows__: 
+	```bash
+	conda create --name rl_torch_36 python=3.6 
+	activate rl_torch_36
+	```
+	
+2. Follow the instructions in [this repository](https://github.com/openai/gym) to perform a minimal install of OpenAI gym.  
+	- Next, install the **classic control** environment group by following the instructions [here](https://github.com/openai/gym#classic-control).
+	- Then, install the **box2d** environment group by following the instructions [here](https://github.com/openai/gym#box2d).
+	
+3. Clone the Udacity repository, and navigate to the `python/` folder.  Then, install several dependencies.
+```bash
+git clone https://github.com/udacity/deep-reinforcement-learning.git
+cd deep-reinforcement-learning/python
+pip install .
+cd ..
+```
+
+4. Clone the repository for the exercise
+```bash
+git clone https://github.com/boskaiolo/RL_Bananas.git
+cd RL_Bananas
+```
+
+5. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `rl_torch_36` environment.  
+```bash
+python -m ipykernel install --user --name rl_torch_36 --display-name "rl_torch_36"
+```
+
+6. Before running code in a notebook, change the kernel to match the `rl_torch_36` environment by using the drop-down `Kernel` menu. 
+
+
+## Want to learn more on Reinforcement Learning?
+
+Try the Deep Reinforcement Learning Nanodegree program at Udacity!
